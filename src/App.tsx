@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
 import './App.css';
+import List from './components/list';
 
 interface TrInfo {
   plant: {
@@ -17,12 +18,9 @@ function App() {
 
   return (
     <ChakraProvider>
-      <div className="head">
-        <h1>Trees</h1>
-      </div>
-      <div>
-        <h2>Trees</h2>
-        {plant}
+      <div className="App">
+        <h1>All The Trees Ever Existed</h1>
+        <List plant={plant} />
       </div>
     </ChakraProvider>
   );
